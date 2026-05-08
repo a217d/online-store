@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROYAL LEGEND | المجموعات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/متجر الكتروني.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">ROYAL <span>LEGEND</span></div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="collections.html" class="active-link">المجموعات</a></li>
+            <li><a href="story.html">قصتنا</a></li>
+            <li><a href="contact.html">اتصل بنا</a></li>
+            <li><a href="login.html" class="nav-login-btn">الدخول</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="cart.html" class="cart-icon" id="cart-icon">
+                <span id="cart-count">0</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+            </a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="القائمة">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <h1>المجموعات</h1>
+        <p>اكتشف أرقى الساعات من أشهر العلامات التجارية العالمية</p>
+    </section>
+
+    <section class="collections-page">
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">الكل</button>
+            <button class="filter-btn" data-filter="cartier">Cartier</button>
+            <button class="filter-btn" data-filter="omega">Omega</button>
+            <button class="filter-btn" data-filter="rolex">Rolex</button>
+            <button class="filter-btn" data-filter="limited">إصدار محدود</button>
+            <button class="filter-btn" data-filter="patek">Patek Philippe</button>
+            <button class="filter-btn" data-filter="ap">Audemars Piguet</button>
+            <button class="filter-btn" data-filter="breitling">Breitling</button>
+            <button class="filter-btn" data-filter="accessories">إكسسوارات</button>
+        </div>
+
+        <div class="sort-bar">
+            <span>ترتيب حسب:</span>
+            <select class="sort-select" id="sort-select">
+                <option value="default">الافتراضي</option>
+                <option value="price-low">السعر: الأقل أولاً</option>
+                <option value="price-high">السعر: الأعلى أولاً</option>
+            </select>
+        </div>
+
+        <!-- ★ كل الكروت داخل div واحد فقط ★ -->
+        <div class="product-grid" id="collection-grid">
+
+            <!-- كرت 1 - Santos de Cartier -->
+            <div class="product-card" data-category="cartier" data-price="7900">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="product-badge">حصري</div>
+                        <div class="product-img-container">
+                            <img src="../brands/watch/Santos de Cartier.avif" alt="Santos de Cartier">
+                        </div>
+                        <div class="card-front-info">
+                            <h3>Santos de Cartier</h3>
+                            <p class="price">7,900$</p>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <h3>Santos de Cartier</h3>
+                            <div class="gold-line"></div>
+                            <p class="description">أيقونة العراقة الفرنسية، هيكل من الفولاذ المصقول مع ميناء بني يجسد الفخامة الكلاسيكية.</p>
+                            <div class="specs-list">
+                                <div class="spec-item"><span class="spec-dot"></span><span>حركة أوتوماتيكية</span></div>
+                                <div class="spec-item"><span class="spec-dot"></span><span>مقاومة للماء 100m</span></div>
+                                <div class="spec-item"><span class="spec-dot"></span><span>زجاج ياقوتي</span></div>
+                            </div>
+                            <span class="price-tag">7,900$</span>
+                            <button class="btn-add-cart" onclick="addToCart(event)">إضافة للسلة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- كرت 2 - Midnight Onyx -->
+            <div class="product-card" data-category="rolex" data-price="3200">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="product-badge">مميز</div>
+                        <div class="product-img-container">
+                            <img src="../brands/watch/Midnight Onyx.avif" alt="Midnight Onyx">
+                        </div>
+                        <div class="card-front-info">
+                            <h3>Midnight Onyx</h3>
+                            <p class="price">3,200$</p>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <h3>Midnight Onyx</h3>
+                            <div class="gold-line"></div>
+                            <p class="description">سيمفونية من الغموض والفخامة، تأتي بهيكل أسود مطفي بالكامل يمنحك حضوراً طاغياً.</p>
+                            <div class="specs-list">
+                                <div class="spec-item"><span class="spec-dot"></span><span>هيكل تيتانيوم أسود</span></div>
+                                <div class="spec-item"><span class="spec-dot"></span><span>زجاج ياقوتي ضد الانعكاس</span></div>
+                                <div class="spec-item"><span class="spec-dot"></span><span>سوار مطاط فاخر</span></div>
+                            </div>
+                            <span class="price-tag">3,200$</span>
+                            <button class="btn-add-cart" onclick="addToCart(event)">إضافة للسلة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- كرت 3 - Royal Gold -->
+            <div class="product-card" data-category="limited" data-price="12500">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="product-badge">إصدار محدود</div>
+                        <div class="product-img-container">
+                            <img src="../brands/watch/Royal Gold.avif" alt="Royal Gold">
+                        </div>
+                        <div class="card-front-info">
+                            <h3>Royal Gold</h3>
+                            <p class="price">12,500$</p>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <h3>Royal Gold</h3>
+                            <div class="gold-line"></div>
+                            <p class="description">تحفة فنية من الذهب الخالص عيار 18، تعكس الذوق الرفيع والمكانة العالية.</p>
+                            <div class="specs-list">
+                                <div class="spec-item"><span class="spec-dot"></span><span>ذهب 18 قيراط</span></div>
+                                <div class="spec-item"><span class="spec-dot"></span><span>ميناء صدف طبيعي</span></div>
+                                <div class="spec-item"><span class="spec-dot"></span><span>إصدار محدود 500 قطعة</span></div>
+                            </div>
+                            <span class="price-tag">12,500$</span>
+                            <button class="btn-add-cart" onclick="addToCart(event)">إضافة للسلة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- كرت 4 - Omega Prestige -->
+            <div class="product-card" data-category="omega" data-price="8500">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="product-badge">فاخر</div>
+                        <div class="product-img-container">
+                            <img src="../brands/watch/Omega.webp" alt="Omega Prestige">
+                        </div>
+                        <div class="card-front-info">
+                            <h3>Omega Prestige</h3>
+                            <p class="price">8,500$</p>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <h3>Omega Prestige</h3>
+                            <div class="gold-line"></div>
+                            <p class="description">تحفة سويسرية بامتياز، تجمع بين الدقة المتناهية والتصميم الخالد مع ميناء أزرق عميق.</p>
+                            <div class="specs-list">
+                                <div class="spec-item"><span class="spec-dot"></span><span>حركة كرونوميتر COSC</span></div>
+                                <div class="spec-item"><span class="spec-dot"></span><span>مقاومة للماء 300m</span></div>
+                                <div class="spec-item"><span class="spec-dot"></span><span>زجاج ياقوتي مضاد للانعكاس</span></div>
+                            </div>
+                            <span class="price-tag">8,500$</span>
+                            <button class="btn-add-cart" onclick="addToCart(event)">إضافة للسلة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- كرت 6 - Audemars Piguet -->
+            <div class="product-card" data-category="ap" data-price="18500">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="product-badge">نادر</div>
+                        <div class="product-img-container">
+                           <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?auto=format&fit=crop&q=80&w=500" alt="Audemars Piguet Royal Oak">
+                        </div>
+                        <div class="card-front-info">
+                            <h3>Audemars Piguet Royal Oak</h3>
+                            <p class="price">18,500$</p>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <h3>Audemars Piguet Royal Oak</h3>
+                            <div class="gold-line"></div>
+                            <p class="description">ثورة التصميم الثماني الأضلاع، هيكل فولاذي مصقول يدوياً مع ميناء أزرق متدرج يخطف الأنظار.</p>
+                            <div class="specs-list">
+                                <div class="spec-item"><span class="spec-dot"></span><span>حركة Calibre 4302</span></div>
+                                <div class="spec-item"><span class="spec-dot"></span><span>زجاج ياقوتي مزدوج</span></div>
+                                <div class="spec-item"><span class="spec-dot"></span><span>سوار متكامل التصميم</span></div>
+                            </div>
+                            <span class="price-tag">18,500$</span>
+                            <button class="btn-add-cart" onclick="addToCart(event)">إضافة للسلة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- كرت 7 - Rolex Daytona -->
+            <div class="product-card" data-category="rolex" data-price="16000">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="product-badge">أسطورة</div>
+                        <div class="product-img-container">
+                           <img src="https://images.unsplash.com/photo-1548169874-53e85f753f1e?auto=format&fit=crop&q=80&w=500" alt="Rolex Cosmograph Daytona">
+                        </div>
+                        <div class="card-front-info">
+                            <h3>Rolex Cosmograph Daytona</h3>
+                            <p class="price">16,000$</p>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <h3>Rolex Cosmograph Daytona</h3>
+                            <div class="gold-line"></div>
+                            <p class="description">ساعة السباقات الأبدية، كرونوغراف دقيق مع ميناء سيراميك ومقاومة استثنائية للصدمات.</p>
+                            <div class="specs-list">
+                                <div class="spec-item"><span class="spec-dot"></span><span>حركة Calibre 4130</span></div>
+                                <div class="spec-item"><span class="spec-dot"></span><span>إطار تاشيميتري سيراميك</span></div>
+                                <div class="spec-item"><span class="spec-dot"></span><span>ضمان 5 سنوات</span></div>
+                            </div>
+                            <span class="price-tag">16,000$</span>
+                            <button class="btn-add-cart" onclick="addToCart(event)">إضافة للسلة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- كرت 8 - Breitling -->
+            <div class="product-card" data-category="breitling" data-price="4800">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="product-badge">طيران</div>
+                        <div class="product-img-container">
+                           <img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?auto=format&fit=crop&q=80&w=500" alt="Breitling Navitimer">
+                        </div>
+                        <div class="card-front-info">
+                            <h3>Breitling Navitimer</h3>
+                            <p class="price">4,800$</p>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <h3>Breitling Navitimer</h3>
+                            <div class="gold-line"></div>
+                            <p class="description">أداة الطيران المعتمدة، مسطرة حسابية دوارة حول الميناء مع دقة كرونوميتر وتصميم عسكري أنيق.</p>
+                            <div class="specs-list">
+                                <div class="spec-item"><span class="spec-dot"></span><span>حركة B01 ذاتية التعبئة</span></div>
+                                <div class="spec-item"><span class="spec-dot"></span><span>مسطرة حسابية للطيران</span></div>
+                                <div class="spec-item"><span class="spec-dot"></span><span>مقاومة للماء 30m</span></div>
+                            </div>
+                            <span class="price-tag">4,800$</span>
+                            <button class="btn-add-cart" onclick="addToCart(event)">إضافة للسلة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- كرت 9 - حافظ ساعات -->
+            <div class="product-card" data-category="accessories" data-price="350">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="product-badge">مكمل</div>
+                        <div class="product-img-container">
+                            <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?auto=format&fit=crop&q=80&w=500" alt="حافظ ساعات فاخر">
+                        </div>
+                        <div class="card-front-info">
+                            <h3>حافظ ساعات فاخر</h3>
+                            <p class="price">350$</p>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <h3>حافظ ساعات فاخر</h3>
+                            <div class="gold-line"></div>
+                            <p class="description">صندوق خشب ماهوجني مع محرك صامت يحافظ على دقة الساعة الأوتوماتيكية.</p>
+                            <div class="specs-list">
+                                <div class="spec-item"><span class="spec-dot"></span><span>محرك ياباني صامت</span></div>
+                                <div class="spec-item"><span class="spec-dot"></span><span>سعة 4 ساعات</span></div>
+                                <div class="spec-item"><span class="spec-dot"></span><span>إضاءة LED داخلية</span></div>
+                            </div>
+                            <span class="price-tag">350$</span>
+                            <button class="btn-add-cart" onclick="addToCart(event)">إضافة للسلة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- كرت 10 - سوار جلد -->
+            <div class="product-card" data-category="accessories" data-price="120">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="product-badge">جلد طبيعي</div>
+                        <div class="product-img-container">
+                           <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?auto=format&fit=crop&q=80&w=500" alt="سوار جلد تمساح">
+                        </div>
+                        <div class="card-front-info">
+                            <h3>سوار جلد تمساح</h3>
+                            <p class="price">120$</p>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <h3>سوار جلد تمساح</h3>
+                            <div class="gold-line"></div>
+                            <p class="description">سوار يدوي الصنع من جلد التمساح الأصلي، يخاط بخيوط شمع مقاومة للماء.</p>
+                            <div class="specs-list">
+                                <div class="spec-item"><span class="spec-dot"></span><span>جلد تمساح أصلي</span></div>
+                                <div class="spec-item"><span class="spec-dot"></span><span>خياطة يدوية مقاومة</span></div>
+                                <div class="spec-item"><span class="spec-dot"></span><span>مقاسات 18-22mm</span></div>
+                            </div>
+                            <span class="price-tag">120$</span>
+                            <button class="btn-add-cart" onclick="addToCart(event)">إضافة للسلة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- ★ نهاية product-grid - كل الكروت العشرة بداخله ★ -->
+    </section>
+
+    <section class="back-home-section">
+        <a href="index.html" class="btn-back-home">
+            <span class="arrow-icon">→</span>
+            <span>العودة للرئيسية</span>
+        </a>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">ROYAL <span>LEGEND</span></div>
+                <p>حيث يلتقي الفن بالزمن</p>
+            </div>
+            <div class="footer-links">
+                <h4>روابط سريعة</h4>
+                <a href="index.html">الرئيسية</a>
+                <a href="collections.html">المجموعات</a>
+                <a href="story.html">قصتنا</a>
+            </div>
+            <div class="footer-links">
+                <h4>تواصل معنا</h4>
+                <a href="mailto:info@royallegend.com">info@royallegend.com</a>
+                <a href="tel:+966550000000">+966 55 000 0000</a>
+                <a href="#">الرياض، السعودية</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 ROYAL LEGEND. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="../js/متجر الكتروني.js"></script>
+</body>
+</html>

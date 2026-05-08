@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROYAL LEGEND | سلة المشتريات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/متجر الكتروني.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <!-- نفس الـ Navbar -->
+    </nav>
+
+    <section class="page-hero">
+        <h1>سلة المشتريات</h1>
+        <p>راجع طلباتك قبل إتمام الشراء</p>
+    </section>
+
+    <section class="cart-page">
+        <div class="cart-page-wrapper">
+
+            <!-- قائمة المنتجات -->
+            <div class="cart-products">
+
+                <div class="cart-table-header">
+                    <span>المنتج</span>
+                    <span>السعر</span>
+                    <span>الكمية</span>
+                    <span>المجموع</span>
+                    <span></span>
+                </div>
+
+                <!-- منتج في السلة -->
+                <div class="cart-page-item">
+                    <div class="cart-product-info">
+                        <img src="../images/watch-1.jpg" alt="Santos de Cartier">
+                        <div>
+                            <h4>Santos de Cartier</h4>
+                            <p>إصدار محدود</p>
+                        </div>
+                    </div>
+                    <span class="cart-price">7,900$</span>
+                    <div class="quantity-control">
+                        <button class="qty-btn">−</button>
+                        <span class="qty-number">1</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <span class="cart-subtotal">7,900$</span>
+                    <button class="cart-remove-btn">✕</button>
+                </div>
+
+                <!-- رسالة السلة الفارغة -->
+                <div class="cart-empty-page" style="display:none;">
+                    <h3>سلتك فارغة</h3>
+                    <p>اكتشف مجموعتنا الفاخرة وأضف ما يعجبك</p>
+                    <a href="collections.html" class="btn-royal">تصفح المجموعات</a>
+                </div>
+            </div>
+
+            <!-- ملخص الطلب -->
+            <div class="order-summary">
+                <h3>ملخص الطلب</h3>
+                <div class="summary-row">
+                    <span>المجموع الفرعي</span>
+                    <span>7,900$</span>
+                </div>
+                <div class="summary-row">
+                    <span>الشحن</span>
+                    <span class="free-shipping">مجاني</span>
+                </div>
+                <div class="summary-row">
+                    <span>الضريبة (15%)</span>
+                    <span>1,185$</span>
+                </div>
+                <div class="summary-divider"></div>
+                <div class="summary-row total-row">
+                    <span>المجموع الكلي</span>
+                    <span>9,085$</span>
+                </div>
+
+                <!-- كود خصم -->
+                <div class="coupon-section">
+                    <input type="text" placeholder="كود الخصم">
+                    <button>تطبيق</button>
+                </div>
+
+                <button class="btn-checkout-full">إتمام الشراء</button>
+                <a href="collections.html" class="continue-shopping">← متابعة التسوق</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <!-- نفس الفوتر -->
+    </footer>
+
+    <script src="../js/متجر الكتروني.js"></script>
+</body>
+</html>
