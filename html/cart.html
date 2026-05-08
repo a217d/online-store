@@ -10,7 +10,27 @@
 <body>
 
     <nav class="navbar">
-        <!-- نفس الـ Navbar -->
+        <div class="logo">ROYAL <span>LEGEND</span></div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="collections.html">المجموعات</a></li>
+            <li><a href="story.html">قصتنا</a></li>
+            <li><a href="contact.html">اتصل بنا</a></li>
+            <li><a href="login.html" class="nav-login-btn">الدخول</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="cart.html" class="cart-icon" id="cart-icon">
+                <span id="cart-count">0</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+            </a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="القائمة">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </nav>
 
     <section class="page-hero">
@@ -19,52 +39,26 @@
     </section>
 
     <section class="cart-page">
-        <div class="cart-page-wrapper">
+        <div class="cart-page-wrapper" id="cart-page-wrapper">
 
-            <!-- قائمة المنتجات -->
-            <div class="cart-products">
-
+            <div class="cart-products" id="cart-products">
                 <div class="cart-table-header">
                     <span>المنتج</span>
                     <span>السعر</span>
                     <span>الكمية</span>
                     <span>المجموع</span>
-                    <span></span>
+                    <span></span> <!-- عمود زر الحذف -->
                 </div>
-
-                <!-- منتج في السلة -->
-                <div class="cart-page-item">
-                    <div class="cart-product-info">
-                        <img src="../images/watch-1.jpg" alt="Santos de Cartier">
-                        <div>
-                            <h4>Santos de Cartier</h4>
-                            <p>إصدار محدود</p>
-                        </div>
-                    </div>
-                    <span class="cart-price">7,900$</span>
-                    <div class="quantity-control">
-                        <button class="qty-btn">−</button>
-                        <span class="qty-number">1</span>
-                        <button class="qty-btn">+</button>
-                    </div>
-                    <span class="cart-subtotal">7,900$</span>
-                    <button class="cart-remove-btn">✕</button>
-                </div>
-
-                <!-- رسالة السلة الفارغة -->
-                <div class="cart-empty-page" style="display:none;">
-                    <h3>سلتك فارغة</h3>
-                    <p>اكتشف مجموعتنا الفاخرة وأضف ما يعجبك</p>
-                    <a href="collections.html" class="btn-royal">تصفح المجموعات</a>
+                <div id="cart-page-items">
+                    <!-- المنتجات تُملأ بالـ JS -->
                 </div>
             </div>
 
-            <!-- ملخص الطلب -->
-            <div class="order-summary">
+            <div class="order-summary" id="order-summary">
                 <h3>ملخص الطلب</h3>
                 <div class="summary-row">
                     <span>المجموع الفرعي</span>
-                    <span>7,900$</span>
+                    <span id="subtotal">0$</span>
                 </div>
                 <div class="summary-row">
                     <span>الشحن</span>
@@ -72,29 +66,56 @@
                 </div>
                 <div class="summary-row">
                     <span>الضريبة (15%)</span>
-                    <span>1,185$</span>
+                    <span id="tax">0$</span>
                 </div>
                 <div class="summary-divider"></div>
                 <div class="summary-row total-row">
                     <span>المجموع الكلي</span>
-                    <span>9,085$</span>
+                    <span id="grand-total">0$</span>
                 </div>
 
-                <!-- كود خصم -->
                 <div class="coupon-section">
-                    <input type="text" placeholder="كود الخصم">
-                    <button>تطبيق</button>
+                    <input type="text" placeholder="كود الخصم" id="coupon-input">
+                    <button onclick="applyCoupon()">تطبيق</button>
                 </div>
+                <p class="coupon-msg" id="coupon-msg" style="display:none;"></p>
 
-                <button class="btn-checkout-full">إتمام الشراء</button>
+                <button class="btn-checkout-full" onclick="checkout()">إتمام الشراء</button>
                 <a href="collections.html" class="continue-shopping">← متابعة التسوق</a>
             </div>
 
         </div>
+
+        <!-- السلة فارغة -->
+        <div class="cart-empty-page" id="cart-empty-page" style="display:none;">
+            <h3>سلتك فارغة</h3>
+            <p>اكتشف مجموعتنا الفاخرة وأضف ما يعجبك</p>
+            <a href="collections.html" class="btn-royal">تصفح المجموعات</a>
+        </div>
     </section>
 
     <footer class="footer">
-        <!-- نفس الفوتر -->
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">ROYAL <span>LEGEND</span></div>
+                <p>حيث يلتقي الفن بالزمن</p>
+            </div>
+            <div class="footer-links">
+                <h4>روابط سريعة</h4>
+                <a href="index.html">الرئيسية</a>
+                <a href="collections.html">المجموعات</a>
+                <a href="story.html">قصتنا</a>
+            </div>
+            <div class="footer-links">
+                <h4>تواصل معنا</h4>
+                <a href="mailto:info@royallegend.com">info@royallegend.com</a>
+                <a href="tel:+966550000000">+966 55 000 0000</a>
+                <a href="#">الرياض، السعودية</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 ROYAL LEGEND. جميع الحقوق محفوظة</p>
+        </div>
     </footer>
 
     <script src="../js/متجر الكتروني.js"></script>
